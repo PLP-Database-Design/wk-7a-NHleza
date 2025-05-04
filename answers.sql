@@ -1,13 +1,11 @@
 -- Question 1
--- Create a new table following 1NF rules
-CREATE TABLE ProductDetail_1NF (
+CREATE TABLE ProductDetail(
     OrderID INT,
     CustomerName VARCHAR(100),
     Product VARCHAR(100)
 );
 
--- Insert transformed data, ensuring each product is in a separate row
-INSERT INTO ProductDetail_1NF(OrderID, CustomerName, Product)
+INSERT INTO ProductDetail(OrderID, CustomerName, Product)
     VALUES
     (101,'John Deo','Laptop'),
     (101,'John Deo','Mouse'),
@@ -17,7 +15,6 @@ INSERT INTO ProductDetail_1NF(OrderID, CustomerName, Product)
     (103,'Emily Clark','Phone');
 
 -- Question 2
--- Create Orders table (Each OrderID maps to a CustomerName)
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
     CustomerName VARCHAR(100)
